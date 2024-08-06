@@ -15,7 +15,6 @@ export const Form = () => {
 
     const GEMINI_API_KEY = "AIzaSyCsuZn39V72kEmGx6494MHe5HFCG7gp-do";
 
-
     async function generateAnswer(e) {
         console.log("**************************")
         const data={
@@ -66,24 +65,24 @@ export const Form = () => {
 
     return (
         <>
-            <form  onSubmit={generateAnswer}>
+            <form onSubmit={generateAnswer}>
                 <h1>Douets Collection Form</h1>
-                <label htmlFor='name'>Name:</label>
+                <label htmlFor="name">Name <span className="required">*</span></label>
                 <input type="text" id="name" name="Name" value={name} onChange={(e)=>setName(e.target.value)} required/>
 
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Email <span className="required">*</span></label>
                 <input type="email" id="email" name="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
 
-                <label htmlFor="douet1">Douet1: </label>
+                <label htmlFor="douet1">Douet1 <span className="required">*</span></label>
                 <input type="text" id="douet1" name="Douet1" value={douet1} onChange={(e)=>setDouet1(e.target.value)} required />
 
 
                 <label htmlFor="douet2">Douet2: </label>
-                <input type="text" id="douet2" name="Douet2" value={douet2} onChange={(e)=>setDouet2(e.target.value)}  required />
+                <input type="text" id="douet2" name="Douet2" value={douet2} onChange={(e)=>setDouet2(e.target.value)} />
 
 
                 <label htmlFor="douet3">Douet3: </label>
-                <input type="text" id="douet3" name="Douet3" value={douet3} onChange={(e)=>setDouet3(e.target.value)} required />
+                <input type="text" id="douet3" name="Douet3" value={douet3} onChange={(e)=>setDouet3(e.target.value)}  />
 
 
                 <label htmlFor="douet4">Douet4: </label>

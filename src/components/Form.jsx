@@ -17,39 +17,6 @@ export const Form = () => {
 
     const GEMINI_API_KEY = "AIzaSyCsuZn39V72kEmGx6494MHe5HFCG7gp-do";
 
-    // const integrateSheet = async(data) => {
-    //     // e.preventDefault();
-    //     // console.log(e)
-
-    //     // const data = {
-    //     //     name: "hello ertryt",
-    //     //     email: "try@gmail.com",
-    //     //     cost: "jhfajh jhfdj",
-    //     //     price: 90
-    //     // }
-
-    //     fetch(scriptURL, { method: 'POST', body: data})
-    //         .then(response => response.json())
-    //         .then(response => {
-    //             if (response.result === 'success') {
-    //                 alert("Thanks for contacting us! We will get in touch with you soon.");
-    //             } else {
-    //                 console.error('Error!', response.error);
-    //                 alert("There was an error submitting the form. Please try again.");
-    //             }
-    //         })
-    //         .catch(error => console.error('Error!', error.message));
-
-       
-
-    //     // axios.post(scriptURL,data).then((res) => {
-    //     //     console.log(res, 'kkkkk');
-    //     // }).catch((err) => {
-    //     //     console.log(err, "ggggg");
-    //     // })
-    // }
-
-
     async function generateAnswer(e) {
         console.log("**************************")
         const data={
@@ -99,24 +66,24 @@ export const Form = () => {
 
     return (
         <>
-            <form ref={formRef} method='post' name='google' onSubmit={generateAnswer}>
+            <form onSubmit={generateAnswer}>
                 <h1>Douets Collection Form</h1>
-                <label htmlFor='name'>Name:</label>
+                <label htmlFor="name">Name <span class="required">*</span></label>
                 <input type="text" id="name" name="Name" onChange={(e)=>setName(e.target.value)} required/>
 
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Email <span class="required">*</span></label>
                 <input type="email" id="email" name="Email" onChange={(e)=>setEmail(e.target.value)} required/>
 
-                <label htmlFor="douet1">Douet1: </label>
+                <label htmlFor="douet1">Douet1 <span class="required">*</span></label>
                 <input type="text" id="douet1" name="Douet1" value={douet1} onChange={(e)=>setDouet1(e.target.value)} required />
 
 
                 <label htmlFor="douet2">Douet2: </label>
-                <input type="text" id="douet2" name="Douet2" value={douet2} onChange={(e)=>setDouet2(e.target.value)}  required />
+                <input type="text" id="douet2" name="Douet2" value={douet2} onChange={(e)=>setDouet2(e.target.value)} />
 
 
                 <label htmlFor="douet3">Douet3: </label>
-                <input type="text" id="douet3" name="Douet3" value={douet3} onChange={(e)=>setDouet3(e.target.value)} required />
+                <input type="text" id="douet3" name="Douet3" value={douet3} onChange={(e)=>setDouet3(e.target.value)}  />
 
 
                 <label htmlFor="douet4">Douet4: </label>
@@ -131,18 +98,3 @@ export const Form = () => {
         </>
     )
 }
-
-
-/* <form method="post" name="google">
-    <h1>Book Site Tour</h1><br>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="Name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="Email" required>
-
-    <label for="mobile">Mobile:</label>
-    <input type="tel" id="mobile" name="Mobile" required>
-
-    <input type="submit" value="Submit" name="submit" id="submit">
-    </form> */

@@ -5,6 +5,7 @@ import axios from 'axios';
 export const Form = () => {
     const scriptURL = "https://sheet.best/api/sheets/8fbefe28-bc9c-4a22-9632-c7d143b8e8a7";
 
+    const [isLoading, setIsLoading] = useState(false);
     const [douet1, setDouet1] = useState('');
     const [douet2, setDouet2] = useState('');
     const [douet3, setDouet3] = useState('');
@@ -26,6 +27,7 @@ export const Form = () => {
         const filteredQuestions = question.filter(elem => elem.trim() !== "");
 
         e.preventDefault();
+        setIsLoading(true);
         try {
             for(let ind in filteredQuestions){
                 const response = await axios({
@@ -58,6 +60,9 @@ export const Form = () => {
         }
         catch (error) {
             console.log(error);
+        }
+        finally {
+            setIsLoading(false);
         }
     
     }
@@ -92,7 +97,7 @@ export const Form = () => {
                 <label htmlFor="douet5">Doubt5: </label>
                 <input type="text" id="douet5" name="Douet5" value={douet5} onChange={(e)=>setDouet5(e.target.value)} />
 
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={isLoading}>{isLoading ? 'Submitting...' : 'Submit'}</button>
             </form>
         </>
     )

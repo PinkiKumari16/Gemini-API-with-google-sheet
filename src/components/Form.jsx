@@ -73,23 +73,23 @@ export const Form = () => {
                 <label htmlFor="email">Email <span className="required">*</span></label>
                 <input type="email" id="email" name="Email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
 
-                <label htmlFor="douet1">Douet1 <span className="required">*</span></label>
+                <label htmlFor="douet1">Doubt1 <span className="required">*</span></label>
                 <input type="text" id="douet1" name="Douet1" value={douet1} onChange={(e)=>setDouet1(e.target.value)} required />
 
 
-                <label htmlFor="douet2">Douet2: </label>
+                <label htmlFor="douet2">Doubt2: </label>
                 <input type="text" id="douet2" name="Douet2" value={douet2} onChange={(e)=>setDouet2(e.target.value)} />
 
 
-                <label htmlFor="douet3">Douet3: </label>
+                <label htmlFor="douet3">Doubt3: </label>
                 <input type="text" id="douet3" name="Douet3" value={douet3} onChange={(e)=>setDouet3(e.target.value)}  />
 
 
-                <label htmlFor="douet4">Douet4: </label>
+                <label htmlFor="douet4">Doubt4: </label>
                 <input type="text" id="douet4" name="Douet4" value={douet4} onChange={(e)=>setDouet4(e.target.value)} />
 
 
-                <label htmlFor="douet5">Douet5: </label>
+                <label htmlFor="douet5">Doubt5: </label>
                 <input type="text" id="douet5" name="Douet5" value={douet5} onChange={(e)=>setDouet5(e.target.value)} />
 
                 <button type="submit">Submit</button>

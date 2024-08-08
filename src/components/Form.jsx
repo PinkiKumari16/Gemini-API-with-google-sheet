@@ -66,7 +66,7 @@ export const Form = () => {
     return (
         <>
             <form onSubmit={generateAnswer}>
-                <h1>Douets Collection Form</h1>
+                <h1>Doubts Collection Form</h1>
                 <label htmlFor="name">Name <span className="required">*</span></label>
                 <input type="text" id="name" name="Name" value={name} onChange={(e)=>setName(e.target.value)} required/>
 

@@ -1,8 +1,8 @@
 /* Base styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    background: linear-gradient(to right, rgb(151, 166, 175), rgb(236, 205, 205), rgb(144, 147, 130));
+    background-color: whitesmoke;
+    /* background: linear-gradient(to right, rgba(244, 116, 57, 0.995), rgb(228, 226, 226), rgb(249, 197, 163)); */
     color: #333;
     margin: 0;
     padding: 0;
@@ -15,12 +15,10 @@ body {
 form {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px 40px;
-    /* max-width: 400px; */
+    box-shadow: 0 4px 98px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 35px;
     width: 40vw;
     box-sizing: border-box;
-    height: 87vh;
 }
 
 h1 {
@@ -65,7 +63,7 @@ button {
     padding: 12px;
     border: none;
     border-radius: 4px;
-    background-color: #5059a0;
+    background-color: #fb6304;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -73,7 +71,7 @@ button {
 }
 
 button:hover {
-    background-color: #fb6304;
+    background-color: #23a5a5;
 }
 
 button:active {
